@@ -1,0 +1,10 @@
+<%= link_to 'Logout', destroy_user_session_path, class: 'btn', method: :delete %>
+
+<% @bus_reservations.each do |reservation| %>
+  <div class="">
+    <%= reservation.name %>
+    <%= reservation.date %>
+  </div>
+<% end %>
+
+<%= link_to 'Export as CSV', dashboards_path(format: :csv) %>
