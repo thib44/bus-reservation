@@ -1,6 +1,5 @@
 class BusReservation < ApplicationRecord
-  validates :name, :date, presence: true
-
+  validates :first_name, :last_name, :hour, :date, presence: true
 
   def self.to_csv
     CSV.generate do |csv|

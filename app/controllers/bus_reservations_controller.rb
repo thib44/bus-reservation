@@ -9,8 +9,8 @@ class BusReservationsController < ApplicationController
 
   # GET /bus_reservations/1
   # GET /bus_reservations/1.json
-  def show
-  end
+  # def show
+  # end
 
   # GET /bus_reservations/new
   def new
@@ -53,13 +53,13 @@ class BusReservationsController < ApplicationController
 
   # DELETE /bus_reservations/1
   # DELETE /bus_reservations/1.json
-  def destroy
-    @bus_reservation.destroy
-    respond_to do |format|
-      format.html { redirect_to bus_reservations_url, notice: 'Bus reservation was successfully destroyed.' }
-      format.json { head :no_content }
-    end
-  end
+  # def destroy
+  #   @bus_reservation.destroy
+  #   respond_to do |format|
+  #     format.html { redirect_to bus_reservations_url, notice: 'Bus reservation was successfully destroyed.' }
+  #     format.json { head :no_content }
+  #   end
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -69,6 +69,6 @@ class BusReservationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def bus_reservation_params
-      params.require(:bus_reservation).permit(:date, :name)
+      params.require(:bus_reservation).permit(:date, :hour, :first_name, :last_name, :start_location, :end_location, :department)
     end
 end

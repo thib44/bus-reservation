@@ -1,4 +1,28 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_bus_reservation_path(@bus_reservation) %> |
-<%= link_to 'Back', bus_reservations_path %>
+      <div class="bus-reservation">
+        <ul>
+          <li>
+            <%= @bus_reservation.first_name %>
+          </li>
+          <li>
+            <%= @bus_reservation.last_name %>
+          </li>
+          <li>
+            <%= @bus_reservation.date %>
+          </li>
+          <li>
+            <%= @bus_reservation.hour %>
+          </li>
+        </ul>
+      </div>
+
+      <%= link_to 'Edit', edit_bus_reservation_path(@bus_reservation), class: 'btn btn-primary' %>
+      <%= link_to 'Destroy', bus_reservation_path(@bus_reservation), method: :delete, class: 'btn btn-danger' %>
+      <%= link_to 'Back', bus_reservations_path %>
+    </div>
+  </div>
+</div>

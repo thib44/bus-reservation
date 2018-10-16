@@ -16,8 +16,13 @@ ActiveRecord::Schema.define(version: 2018_09_07_124526) do
   enable_extension "plpgsql"
 
   create_table "bus_reservations", force: :cascade do |t|
-    t.datetime "date"
-    t.string "name"
+    t.date "date"
+    t.string "hour"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "department"
+    t.string "start_location"
+    t.string "end_location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

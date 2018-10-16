@@ -12,9 +12,9 @@
   <tbody>
     <% @bus_reservations.each do |bus_reservation| %>
       <tr>
-        <td><%= link_to 'Show', bus_reservation %></td>
-        <td><%= link_to 'Edit', edit_bus_reservation_path(bus_reservation) %></td>
-        <td><%= link_to 'Destroy', bus_reservation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= bus_reservation.first_name %></td>
+        <!-- <td><%= link_to 'Edit', edit_bus_reservation_path(bus_reservation) %></td> -->
+        <!-- <td><%= link_to 'Destroy', bus_reservation, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>
     <% end %>
   </tbody>
